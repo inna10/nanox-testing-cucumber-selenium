@@ -7,6 +7,11 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 
+/**
+ * class LoginPage
+ * Used for signed-in actions from the Home page
+ * and handles login-popup
+ */
 public class LoginPage extends BasePage {
 
     @FindBy (id = "login2")

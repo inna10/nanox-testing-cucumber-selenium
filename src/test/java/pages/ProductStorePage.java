@@ -5,6 +5,11 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.ExpectedConditions;
+/**
+ * class ProductStorePage
+ * reflects the home page with main menu inside
+ *
+ */
 
 public class ProductStorePage extends BasePage {
     @FindBy(id = "nameofuser")

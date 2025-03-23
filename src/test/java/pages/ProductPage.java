@@ -8,6 +8,11 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 
+/**
+ * class ProductPage
+ * reflects product details pane with Add to Cart button
+ *
+ */
 
 public class ProductPage extends BasePage{
    // @FindBy(xpath = "/html/body/div[5]")
