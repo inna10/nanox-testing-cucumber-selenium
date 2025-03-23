@@ -8,7 +8,11 @@ import pages.BasePage;
 import pages.ProductStorePage;
 import pages.LoginPage;
 
+import java.util.logging.Level;
+import java.util.logging.Logger;
+
 public class LoginStepDefinitions {
+    Logger logger = Logger.getLogger(this.getClass().getName());
     LoginPage loginPage;
     ProductStorePage productStorePage;
 
@@ -25,7 +29,7 @@ public class LoginStepDefinitions {
 
     @Then("user can view the product store page")
     public void user_can_view_the_product_store_page() {
-        System.out.println("user_can_view_the_product_store_page ########################");
+        logger.log(Level.FINE,"user_can_view_the_product_store_page ########################");
         productStorePage = new ProductStorePage();
         productStorePage.userInProductStore();
     }

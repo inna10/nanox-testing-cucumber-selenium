@@ -9,17 +9,19 @@ import java.io.FileInputStream;
 import java.io.InputStream;
 import java.time.Duration;
 import java.util.Properties;
+import java.util.logging.Logger;
 
 /**
  * Base Page class
  * Provides driver initialization (as a singletone object)
  */
 public class BasePage {
+    static Logger logger = Logger.getLogger(BasePage.class.getName());
     public static WebDriver driver;
     public static WebDriverWait wait;
     public BasePage()
     {
-        System.out.println("Base Page Constructor!!!!!!!!!!!!!!!!!!!!!!!");
+        logger.info("BasePage Constructor called for "+this.getClass().getSimpleName());
     }
     public static WebDriver getDriver(){
         return driver;
@@ -34,7 +36,7 @@ public class BasePage {
     }
 
     public static WebDriver initDriver(){
-        System.out.println("!!!!!!!!!!!!!!!!!INIT Driver!!!!!!!!!!!!!!!!!!!!!!!");
+        logger.info("Driver initializing...");
         driver = new ChromeDriver();
         driver.manage().window().maximize();
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
