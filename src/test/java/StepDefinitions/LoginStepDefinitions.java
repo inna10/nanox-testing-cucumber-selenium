@@ -37,7 +37,8 @@ public class LoginStepDefinitions {
 
     @When("user navigates to the login page and leave the username and password fields empty")
     public void userNavigatesToTheLoginPageAndLeaveTheUsernameAndPasswordFieldsEmpty() {
-        BasePage.initDriver().get("https://www.demoblaze.com");
+        //System.out.println("Property--------------->"+System.getProperty("siteURL"));
+        BasePage.initDriver().get(System.getProperty("siteURL"));//"https://www.demoblaze.com");
     }
 
     @And("user click the LogIn button")
