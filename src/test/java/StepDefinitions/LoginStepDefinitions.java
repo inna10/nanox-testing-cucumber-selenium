@@ -5,8 +5,8 @@ import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import pages.BasePage;
-import pages.ProductStorePage;
 import pages.LoginPage;
+import pages.ProductStorePage;
 
 import java.util.logging.Level;
 import java.util.logging.Logger;
@@ -29,7 +29,7 @@ public class LoginStepDefinitions {
 
     @Then("user can view the product store page")
     public void user_can_view_the_product_store_page() {
-        logger.log(Level.FINE,"user_can_view_the_product_store_page ########################");
+        logger.log(Level.FINE, "user_can_view_the_product_store_page ########################");
         productStorePage = new ProductStorePage();
         productStorePage.userInProductStore();
     }
@@ -41,7 +41,6 @@ public class LoginStepDefinitions {
 
     @When("user navigates to the login page and leave the username and password fields empty")
     public void userNavigatesToTheLoginPageAndLeaveTheUsernameAndPasswordFieldsEmpty() {
-        //System.out.println("Property--------------->"+System.getProperty("siteURL"));
         BasePage.initDriver().get(System.getProperty("siteURL"));//"https://www.demoblaze.com");
     }
 

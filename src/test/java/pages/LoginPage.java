@@ -14,35 +14,36 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
  */
 public class LoginPage extends BasePage {
 
-    @FindBy (id = "login2")
+    @FindBy(id = "login2")
     WebElement loginNavigate;
 
-    @FindBy (id = "loginusername")
+    @FindBy(id = "loginusername")
     WebElement usernameField;
 
-    @FindBy (id= "loginpassword")
+    @FindBy(id = "loginpassword")
     WebElement passwordField;
 
     @FindBy(xpath = "//button[@onclick='logIn()']")
     WebElement loginButton;
 
-    public LoginPage(){
+    public LoginPage() {
         PageFactory.initElements(driver, this);
     }
+
     //User does not exist.
-    public void doLogin(String username, String password){
+    public void doLogin(String username, String password) {
         wait.until(ExpectedConditions.visibilityOf(loginNavigate)).click();
         wait.until(ExpectedConditions.visibilityOf(usernameField)).sendKeys(username);
         wait.until(ExpectedConditions.visibilityOf(passwordField)).sendKeys(password);
         wait.until(ExpectedConditions.visibilityOf(loginButton)).click();
     }
 
-    public void clickLogin(){
+    public void clickLogin() {
         wait.until(ExpectedConditions.visibilityOf(loginNavigate)).click();
         wait.until(ExpectedConditions.visibilityOf(loginButton)).click();
     }
 
-    public void assertingErrorMessage(){
+    public void assertingErrorMessage() {
         wait.until(ExpectedConditions.alertIsPresent());
         Alert alert = driver.switchTo().alert();
 
@@ -54,7 +55,7 @@ public class LoginPage extends BasePage {
         alert.accept();
     }
 
-    public void assertingEmptyFieldErrorMessage(String errStr){
+    public void assertingEmptyFieldErrorMessage(String errStr) {
         wait.until(ExpectedConditions.alertIsPresent());
         Alert alert = driver.switchTo().alert();
 
