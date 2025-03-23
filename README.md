@@ -16,7 +16,7 @@ Additionally, the project includes test coverage for adding a product to the car
 ## How to run this project
 - Clone project from the GIT
 - If you have the 'gradle' installed: run the following command: ```gradle clean test```
-- Alternatively, run the 'test' task from the IDE's Gradle pane
+- Alternatively, run the 'test' task from the IDE's Gradle pane or './gradlew clean test' from project root directory
 
 
 
